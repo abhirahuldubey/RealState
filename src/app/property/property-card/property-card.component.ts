@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IpropertyBase } from 'src/app/model/ipropertyBase';
 
 @Component({
   selector: 'app-property-card',
@@ -7,12 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PropertyCardComponent implements OnInit {
   constructor() {}
-  Property: any = {
-    Id: 1,
-    Name: 'Abhishek house',
-    Type: 'House',
-    Price: 1200,
-  };
+  @Input() property: IpropertyBase;
 
   ngOnInit(): void {}
 }
