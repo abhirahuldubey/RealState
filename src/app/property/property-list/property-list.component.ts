@@ -15,6 +15,10 @@ export class PropertyListComponent implements OnInit {
   ) {}
   SellRent = 1;
   properties: Array<IpropertyBase>;
+  City = '';
+  SearchCity = '';
+  SortByParam = '';
+  SortDirection = 'asc';
   ngOnInit(): void {
     if (this.route.snapshot.url.toString()) {
       this.SellRent = 2; // Means we are on rent-property URL  else we are on base URL
@@ -28,5 +32,20 @@ export class PropertyListComponent implements OnInit {
         console.log(error);
       }
     );
+  }
+
+  onCityFilter() {
+    this.SearchCity = this.City;
+  }
+  onCityFilterClear() {
+    this.SearchCity = '';
+    this.City = '';
+  }
+  onSortDirection() {
+    if (this.SortDirection === 'desc') {
+      this.SortDirection = 'asc';
+    } else {
+      this.SortDirection = 'desc';
+    }
   }
 }

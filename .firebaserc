@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "projectproperty-angular"
+  },
+  "targets": {
+    "projectproperty-angular": {
+      "hosting": {
+        "ProjectProperty": [
+          "projectproperty-angular"
+        ]
+      }
+    }
+  }
+}
